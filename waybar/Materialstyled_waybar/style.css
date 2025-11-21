@@ -1,0 +1,206 @@
+@import "../omarchy/current/theme/waybar.css";
+
+* {
+  /* background-color: @background; */
+  /* color: @foreground; */
+  border: none;
+  border-radius: 0;
+  font-family: 'JetBrainsMono Nerd Font';
+  font-size: 12px;
+}
+
+.modules-left,
+.modules-right {
+  padding: 4;
+}
+
+window#waybar {
+  background: @background;
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  color: transparent;
+  transition: 0.1s;
+}
+
+mpris.empty {
+  background: transparent;
+}
+
+#workspaces button {
+  all: initial;
+  margin: 4;
+  padding: 4 11 5 7;
+  border-radius: 10px;
+  transition: 0.4s;
+}
+#workspaces button.active {
+  background: @foreground;
+  color: @background;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+#workspaces button:hover {
+  background: alpha(@foreground, 0.3);
+  transition: 0.4s;
+  border-radius: 6px;
+}
+#workspaces button.active:hover {
+  background: alpha(@foreground, 0.9);
+  color: alpha(@background, 0.9);
+  transition: 0.4s;
+}
+#workspaces button.empty {
+  opacity: 0.3;
+  border-radius: 6px;
+}
+
+#memory,
+#mpris,
+#window,
+#tray-expander,
+#workspaces,
+#clock,
+#cpu,
+#battery,
+#bluetooth,
+#network,
+#pulseaudio,
+#custom-screenrecording-indicator,
+#custom-update {
+  background-color: alpha(@foreground, 0.1);
+  padding: 0 10;
+  margin: 0 0;
+  transition: 0.4s;
+}
+
+#mpris {
+  margin-right: 6;
+  border-radius: 10px;
+}
+#mpris:hover {
+  border-radius: 6px;
+}
+
+#custom-weather,
+#tray {
+  padding: 0 10;
+}
+#mpris:hover,
+#window:hover,
+#clock:hover,
+#backlight:hover,
+#cpu:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#custom-screenrecording-indicator:hover,
+#custom-update:hover {
+  background-color: alpha(@foreground, 0.2);
+  transition: 0.4s;
+}
+
+#custom-expand-icon {
+  padding: 0 0 0 4;
+}
+
+#custom-update {
+  font-size: 10px;
+}
+#clock:hover {
+  border-radius: 5px;
+}
+#clock {
+  margin: 4 0;
+  border-radius: 10px;
+  padding: 6;
+  transition: 0.4s;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+#custom-screenrecording-indicator {
+  border-radius: 10px;
+  min-width: 12px;
+  font-size: 10px;
+  padding: 0 11 0 10;
+}
+
+#custom-screenrecording-indicator.active {
+  color: #a55555;
+}
+
+/* EXTRA FIX! */
+#custom-omarchy,
+#battery {
+  background-color: @foreground;
+  color: @background;
+  border-radius: 10px;
+  padding: 0 8;
+  min-width: 12px;
+  transition: 0.4s;
+}
+#battery:hover,
+#custom-omarchy:hover {
+  transition: 0.4s;
+  border-radius: 6px;
+  background-color: alpha(@foreground, 0.6);
+}
+
+#workspaces {
+  border-radius: 10px;
+  margin: 0 6;
+  padding: 0;
+}
+#window {
+  border-radius: 10px;
+  margin-right: 6px;
+  /* transition: 0; */
+}
+#window:hover {
+  border-radius: 6px;
+  margin-right: 6px;
+  /* transition: 0; */
+}
+
+#tray-expander {
+  margin-right: 6px;
+  border-radius: 10px;
+}
+/* #backlight { */
+/* background-color: alpha(@foreground, 0.1); */
+/* border-radius: 10px; */
+/* margin-right: 6px; */
+/* } */
+#network {
+  border-radius: 10 0 0 10;
+  padding-right: 6px;
+}
+#network:hover {
+  border-radius: 6 0 0 6;
+  padding-right: 6px;
+}
+#cpu {
+  padding-left: 6px;
+  margin-right: 6px;
+  border-radius: 0 10 10 0;
+}
+#cpu:hover {
+  padding-left: 6px;
+  margin-right: 6px;
+  border-radius: 0 6 6 0;
+}
+#pulseaudio {
+  padding: 0 10 0 8;
+}
+
+tooltip {
+  border-radius: 10px;
+  background-color: alpha(@background, 0.9);
+  border: 0px;
+  /* background: @background; */
+  /* border: 3px solid alpha(@foreground, 0.5); */
+}

@@ -1,0 +1,32 @@
+# Learn how to configure Hyprland: https://wiki.hyprland.org/Configuring/
+
+# Use defaults Omarchy defaults (but don't edit these directly!)
+source = ~/.local/share/omarchy/default/hypr/autostart.conf
+source = ~/.local/share/omarchy/default/hypr/bindings/media.conf
+source = ~/.local/share/omarchy/default/hypr/bindings/tiling.conf
+source = ~/.local/share/omarchy/default/hypr/bindings/utilities.conf
+source = ~/.local/share/omarchy/default/hypr/envs.conf
+source = ~/.local/share/omarchy/default/hypr/looknfeel.conf
+source = ~/.local/share/omarchy/default/hypr/input.conf
+source = ~/.local/share/omarchy/default/hypr/windows.conf
+source = ~/.config/omarchy/current/theme/hyprland.conf
+
+# Change your own setup in these files (and overwrite any settings from defaults!)
+source = ~/.config/hypr/monitors.conf
+source = ~/.config/hypr/input.conf
+source = ~/.config/hypr/bindings.conf
+source = ~/.config/hypr/envs.conf
+source = ~/.config/hypr/looknfeel.conf
+source = ~/.config/hypr/autostart.conf
+###################Clipse##################################
+exec-once = clipse -listen # run listener on startup
+
+windowrulev2 = float,class:(clipse) # ensure you have a floating window class set if you want this behavior
+windowrulev2 = size 622 652,class:(clipse) # set the size of the window as necessary
+
+bind = SUPER_SHIFT , V, exec,  alacritty --class clipse -e 'clipse' 
+
+# Example: bind = SUPER, V, exec, alacritty --class clipse -e 'clipse'
+#####################################################################
+
+exec-once = tlp start
