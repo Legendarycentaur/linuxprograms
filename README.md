@@ -15,3 +15,4 @@ A list of all of my important linux programs
 `spotify`
 `androidstudio`
 `dotnet 10`
+`yazi`
