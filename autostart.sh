@@ -24,3 +24,6 @@ wl-paste --type text --watch cliphist store >/dev/null 2>&1 &
 
 # inhibit by audio
 sway-audio-idle-inhibit >/dev/null 2>&1 &
+
+#add gnome authentication agent
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1

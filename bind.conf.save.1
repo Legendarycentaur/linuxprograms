@@ -42,10 +42,10 @@ bind=SUPER+SHIFT,Right,exchange_client,right
 
 # -- 3. Moving Windows --
 # Move the actual window using Super + Shift + Arrows
-bind=SUPER+CTRL+SHIFT,Up,movewin,+0,-50
-bind=SUPER+CTRL+SHIFT,Down,movewin,+0,+50
-bind=SUPER+CTRL+SHIFT,Left,movewin,-50,+0
-bind=SUPER+CTRL+SHIFT,Right,movewin,+50,+0
+bind=CTRL+ SHIFT,Up,movewin,+0,-50
+bind=CTRL+SHIFT,Down,movewin,+0,+50
+bind=CTRL+SHIFT,Left,movewin,-50,+0
+bind=CTRL+SHIFT,Right,movewin,+50,+0
 
 
 # -- 4. Resizing Windows --
@@ -124,9 +124,7 @@ mousebind=SUPER,btn_right,moveresize,curresize
 mousebind=SUPER,btn_middle,togglefloating
 
 # -- 11. Custom Apps & Screenshots --
-bind=SUPER+SHIFT,B,spawn,zen
-bind=SUPER+.,,wofi --show dmenu
-bind=SUPER+SHIFT,T,spawn,ghostty -e btop
+bind=SUPER+SHIFT,B,spawn,zen 
 bind=SUPER+SHIFT,F,spawn,ghostty -e yazi
 # Screenshot (Super + Shift + S) - Standard location
 bind=SUPER+SHIFT,s,spawn_shell,grim -g "$(slurp -b '#2E2A1E55' -c '#fb751bff')" -t ppm - | satty -f -
