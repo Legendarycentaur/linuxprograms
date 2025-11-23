@@ -20,13 +20,13 @@ function send_notification {
 
 case $1 in
 up)
-	swayosd-client --brightness +2
-	# brightnessctl set +1%
+	swayosd-client --brightness +5
+	brightnessctl -d amdgpu_bl1 set +5%
 	# send_notification
 	;;
 down)
-	swayosd-client --brightness -2
-	# brightnessctl set 1%-
+	swayosd-client --brightness -5
+	brightnessctl -d amdgpu_bl1 set 5%-
 	# send_notification
 	;;
 esac
