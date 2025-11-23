@@ -1,56 +1,71 @@
-window {
-    font-family: HYLeMiaoTiJ,CaskaydiaCove Nerd Font, monospace;
-    font-size: 12pt;
+/* -----------------------------------------------------
+ * WLOGOUT - COMPACT LEGION GOLD
+ * ----------------------------------------------------- */
+
+* {
+    background-image: none;
+    font-family: "iosevka", "JetBrainsMono Nerd Font", monospace;
+    font-size: 13px;       /* Slightly smaller text */
     font-weight: bold;
-    color: #f4dfcd; 
-    background-color: rgba(46, 42, 30, 0.69);
+}
+
+window {
+    background-color: rgba(18, 14, 8, 0.85);
+    color: #1b140a;
 }
 
 button {
+    /* LEGION COLORS */
+    background-color: #b3976d;
+    border: 2px solid #8c734e;
+    color: #1b140a;
+    
+    border-radius: 0px; 
+    
+    /* COMPACT SIZING */
+    margin: 5px;           /* Reduced from 10px or 120px */
+    padding: 0px;
+    
+    /* Force a smaller, square tile size */
+    min-width: 100px;      /* Set specific width */
+    min-height: 100px;     /* Set specific height */
+    
     background-repeat: no-repeat;
     background-position: center;
-    font-size: 40px;
-    background-size: 60%;
-    border: none;
-    color: #d5b497;
-    text-shadow: none;
-    border-radius: 20px 20px 20px 20px;
-    background-color: rgba(121, 81, 1, 0);
-    margin-top: 120px;
-    margin-bottom: 120px;
-    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
+    background-size: 25%;
+    
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    transition: background-color 0.1s ease-in-out;
 }
 
+/* Hover Effect */
 button:hover {
-    background-color: rgba(184, 149, 80, 0.3);
-    background-size: 80%;
-    transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682), box-shadow 0.5s ease-in;
+    background-color: #d1b994;
+    color: #120e08;
+    border-color: #b3976d;
+    outline-style: none; /* Removes the dashed line on focus */
 }
 
-#lock {
-    background-image: image(url("./icons/lock.png"));
+/* Keyboard Focus Effect (Crucial for keyboard nav) */
+button:focus {
+    background-color: #d1b994; /* Same as hover */
+    color: #120e08;
+    border-color: #f4dfcd;     /* Brighter border to show focus */
 }
 
-#logout {
-    background-image: image(url("./icons/logout.png"));
+/* Active/Click Effect */
+button:active {
+    background-color: #8c734e;
+    color: #f4dfcd;
+    background-size: 20%;
 }
 
-#logout:hover {
-    background-image: image(url("./icons/logout.png"));
-}
-
-#suspend {
-    background-image: image(url("./icons/sleep.png"));
-} 
-
-#shutdown {
-    background-image: image(url("./icons/power.png"));
-}
-
-#reboot {
-    background-image: image(url("./icons/restart.png"));
-}
-
-#hibernate {
-    background-image: image(url("./icons/hibernate.png"));
-}
+/* -----------------------------------------------------
+ * ICONS
+ * ----------------------------------------------------- */
+#lock { background-image: image(url("./icons/lock.png")); }
+#logout { background-image: image(url("./icons/logout.png")); }
+#suspend { background-image: image(url("./icons/sleep.png")); }
+#shutdown { background-image: image(url("./icons/power.png")); }
+#reboot { background-image: image(url("./icons/restart.png")); }
+#hibernate { background-image: image(url("./icons/hibernate.png")); }
