@@ -17,10 +17,10 @@ wlsunset -T 3501 -t 3500 >/dev/null 2>&1 &
 swaybg -i ~/.config/mango/wallpaper/wallpaper.jpg >/dev/null 2>&1 &
 
 # top bar
-# waybar -c ~/.config/mango/waybar/config.jsonc -s ~/.config/mango/waybar/style.css >/dev/null 2>&1 &
+waybar -c ~/.config/mango/waybar/config.jsonc -s ~/.config/mango/waybar/style.css >/dev/null 2>&1 &
 
 # Top Bar (Loads from ~/.config/waybar/config.jsonc automatically)
-waybar >/dev/null 2>&1 &
+# waybar >/dev/null 2>&1 &
 
 # xwayland dpi scale
 echo "Xft.dpi: 140" | xrdb -merge #dpi缩放

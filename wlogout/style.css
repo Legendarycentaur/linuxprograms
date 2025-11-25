@@ -1,71 +1,62 @@
-/* -----------------------------------------------------
- * WLOGOUT - COMPACT LEGION GOLD
- * ----------------------------------------------------- */
-
 * {
-    background-image: none;
-    font-family: "iosevka", "JetBrainsMono Nerd Font", monospace;
-    font-size: 13px;       /* Slightly smaller text */
-    font-weight: bold;
+  font-family: JetBrainsMonoNerdFontMono;
+  font-size: 24px;
+  transition-property: background-color;
+  transition-duration: 0.7s;
 }
 
 window {
-    background-color: rgba(18, 14, 8, 0.85);
-    color: #1b140a;
+  background-color: rgba(40, 40, 40, 0.1);
+  border-radius: 0px; /* Removed rounded corners */
 }
 
 button {
-    /* LEGION COLORS */
-    background-color: #b3976d;
-    border: 2px solid #8c734e;
-    color: #1b140a;
-    
-    border-radius: 0px; 
-    
-    /* COMPACT SIZING */
-    margin: 5px;           /* Reduced from 10px or 120px */
-    padding: 0px;
-    
-    /* Force a smaller, square tile size */
-    min-width: 100px;      /* Set specific width */
-    min-height: 100px;     /* Set specific height */
-    
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 25%;
-    
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
-    transition: background-color 0.1s ease-in-out;
+  color: #1b140a;
+  background-color: #b3976d;
+  border-style: solid;
+  border-width: 3px;
+  border-radius: 0px; /* Removed rounded corners */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 15%;
+  margin: 15px;
 }
 
-/* Hover Effect */
+button:active,
 button:hover {
-    background-color: #d1b994;
-    color: #120e08;
-    border-color: #b3976d;
-    outline-style: none; /* Removes the dashed line on focus */
+  background-color: #458388;
 }
 
-/* Keyboard Focus Effect (Crucial for keyboard nav) */
 button:focus {
-    background-color: #d1b994; /* Same as hover */
-    color: #120e08;
-    border-color: #f4dfcd;     /* Brighter border to show focus */
+  background-color: #458488;
 }
 
-/* Active/Click Effect */
-button:active {
-    background-color: #8c734e;
-    color: #f4dfcd;
-    background-size: 20%;
+#lock {
+  background-image: image(url("/usr/share/wlogout/icons/lock.png"),
+                         url("/usr/local/share/wlogout/icons/lock.png"));
 }
 
-/* -----------------------------------------------------
- * ICONS
- * ----------------------------------------------------- */
-#lock { background-image: image(url("./icons/lock.png")); }
-#logout { background-image: image(url("./icons/logout.png")); }
-#suspend { background-image: image(url("./icons/sleep.png")); }
-#shutdown { background-image: image(url("./icons/power.png")); }
-#reboot { background-image: image(url("./icons/restart.png")); }
-#hibernate { background-image: image(url("./icons/hibernate.png")); }
+#logout {
+  background-image: image(url("/usr/share/wlogout/icons/logout.png"),
+                          url("/usr/local/share/wlogout/icons/logout.png"));
+}
+
+#suspend {
+  background-image: image(url("/usr/share/wlogout/icons/suspend.png"),
+                          url("/usr/local/share/wlogout/icons/suspend.png"));
+}
+
+#hibernate {
+  background-image: image(url("/usr/share/wlogout/icons/hibernate.png"),
+                          url("/usr/local/share/wlogout/icons/hibernate.png"));
+}
+
+#shutdown {
+  background-image: image(url("/usr/share/wlogout/icons/shutdown.png"),
+                          url("/usr/local/share/wlogout/icons/shutdown.png"));
+}
+
+#reboot {
+  background-image: image(url("/usr/share/wlogout/icons/reboot.png"),
+                         url("/usr/local/share/wlogout/icons/reboot.png"));
+}

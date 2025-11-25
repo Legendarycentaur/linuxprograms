@@ -1,3 +1,4 @@
+
 {
     "label" : "lock",
     "action" : "swaylock -f -c 000000 &",
