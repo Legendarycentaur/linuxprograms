@@ -10,9 +10,10 @@ A list of all of my important linux programs
 `localsend`
 `zen-browser`
 `networkmanager- applet`
-`netowrkmanager open vpn`
+`netoworkmanager` `open vpn`
 `stow`
 `spotify`
 `androidstudio`
 `dotnet 10`
 `yazi`
+`fish`
